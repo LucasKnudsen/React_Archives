@@ -1,0 +1,225 @@
+.custom-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 45px;
+  margin: $padding / 2;
+  border-radius: $radius;
+  cursor: pointer;
+  transition: 0.2s ease;
+  position: relative;
+
+  h4 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  h4,
+  svg,
+  img {
+    transition: 0.2s ease;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .start-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+  }
+
+  .end-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+  }
+
+  .custom-icon {
+    height: 25px;
+    width: 25px;
+  }
+
+  .button-loader {
+    position: absolute;
+  }
+
+  // PRIMARY
+  &.--primary {
+    background-color: $primary;
+    h4,
+    svg {
+      color: $white;
+    }
+
+    img {
+      filter: $whiteTint;
+    }
+
+    &:hover {
+      background-color: $faded;
+      h4,
+      svg {
+        color: $primary;
+      }
+      img {
+        filter: $primaryTint;
+      }
+    }
+  }
+
+  // SECONDARY
+  &.--secondary {
+    border: 1px solid $primary;
+    background-color: $white;
+
+    h4,
+    svg {
+      color: $primary;
+    }
+    img {
+      filter: $primaryTint;
+    }
+
+    &:hover {
+      border: 1px solid $primary;
+
+      background-color: $primary;
+      h4,
+      svg {
+        color: $white;
+      }
+    }
+  }
+
+  // TERTIARY
+  &.--tertiary {
+    background-color: $faded;
+    border: 1px solid $faded;
+
+    h4,
+    svg {
+      color: $primary;
+    }
+
+    &:hover {
+      border: 1px solid $primary;
+
+      background-color: $white;
+      h4,
+      svg {
+        color: $primary;
+      }
+      img {
+        filter: $darkTint;
+      }
+    }
+  }
+
+  // ACCENT
+  &.--accent {
+    background-color: $accent;
+    border: 1px solid $accent;
+
+    h4,
+    svg {
+      color: $white;
+    }
+
+    img {
+      filter: $whiteTint;
+    }
+
+    &:hover {
+      border-color: $accent;
+
+      background-color: transparent;
+      h4,
+      svg {
+        color: $base;
+      }
+      img {
+        filter: $darkTint;
+      }
+    }
+  }
+
+  // PURE TEXT
+  &.--text {
+    border-radius: 0;
+    background-color: transparent;
+    h4 {
+      color: $primary;
+    }
+
+    &:hover {
+      text-decoration: underline $primary;
+    }
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  // ONLY ICON
+  &.--icon {
+    padding: $padding;
+    min-width: 60px;
+    min-height: 60px;
+    border-radius: $radius;
+
+    h4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &.--elevated {
+    box-shadow: $shadowNeo;
+    border: none;
+
+    &:hover {
+      border: none;
+    }
+  }
+
+  &:active {
+    transform: scale(0.93);
+  }
+}
+
+.close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $faded;
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.update-button {
+  display: inline-flex;
+
+  &:hover {
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
+  &.synching {
+    svg {
+      animation: spinning infinite 1s linear;
+    }
+  }
+}

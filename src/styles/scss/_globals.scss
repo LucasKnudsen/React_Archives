@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Quattrocento:wght@400;700&display=swap');
+
+// font-family: 'Oswald', sans-serif;
+// font-family: 'Quattrocento', serif;
+
+* {
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+
+  font-family: $mainFont;
+  font-size: $baseFontSize;
+  line-height: 130%;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+
+#__next,
+#root {
+  height: 100%;
+  overflow-x: hidden;
+  background-color: $background;
+
+  @extend .custom-scrollbar;
+}
+
+h1 {
+  font-size: 35px;
+  &.large {
+    font-size: 60px;
+  }
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 18px;
+}
+h6 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 140%;
+  font-weight: 400;
+
+  &.p1 {
+    font-size: 18px;
+  }
+  &.p2 {
+    font-size: 20px;
+  }
+  &.light {
+    font-weight: 200;
+  }
+  &.italic {
+    font-style: italic;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  color: $dark;
+}
+
+p,
+li,
+a {
+  font-family: $bodyFont;
+  color: $dark;
+}

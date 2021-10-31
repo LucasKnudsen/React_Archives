@@ -1,0 +1,50 @@
+@import '../../variables';
+
+.custom-input-container {
+  margin: $padding / 2;
+  display: inline;
+}
+.custom-input {
+  .MuiFormControl-root {
+    margin: 0 24px;
+  }
+
+  label,
+  input {
+    letter-spacing: 1px;
+  }
+
+  .MuiInputBase-root {
+    border-radius: $radius;
+  }
+
+  &.--squared {
+    .MuiInputBase-root {
+      border-radius: 0;
+    }
+  }
+
+  svg,
+  .custom-icon {
+    cursor: pointer;
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  &:focus-within {
+    .custom-icon {
+      filter: $primaryTint;
+    }
+    svg {
+      color: $primary;
+    }
+  }
+}
+
+.date-picker {
+  input {
+    flex: 1;
+  }
+}

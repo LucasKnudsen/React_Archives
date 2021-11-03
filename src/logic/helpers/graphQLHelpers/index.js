@@ -44,7 +44,7 @@ export const subscriptionHelper = async (query, params, callback) => {
       callback(value?.data)
     },
     error: (error) => {
-      logDev(error)
+      console.log(error)
     },
   })
   return subscription

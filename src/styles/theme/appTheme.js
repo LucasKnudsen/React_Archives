@@ -1,5 +1,3 @@
-import { createTheme } from '@mui/material/styles'
-
 export const COLORS = {
   primary: '#0c3a69',
   secondary: '#90aab9',
@@ -43,34 +41,16 @@ export const BREAKPOINTS = {
   isLargeScreen: '(min-width:1201px)',
 }
 
-export const muiTheme = createTheme({
-  palette: {
-    primary: {
-      main: COLORS.primary,
-    },
-    secondary: {
-      main: COLORS.secondary,
-    },
-    info: {
-      main: COLORS.white,
-    },
-  },
-  typography: {
-    fontFamily: FONTS.baseHeading,
-  },
-})
-
 export const toastOptions = {
   style: {
     fontFamily: FONTS.baseHeading,
     minWidth: 200,
-    marginLeft: 200,
   },
   success: {
     duration: 4000,
   },
 }
 
-const appTheme = { COLORS, SIZES, BREAKPOINTS, FONTS, muiTheme, toastOptions }
+const appTheme = { COLORS, SIZES, BREAKPOINTS, FONTS, toastOptions }
 
 export default appTheme

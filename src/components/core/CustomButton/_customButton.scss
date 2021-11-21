@@ -9,7 +9,7 @@
   transition: 0.2s ease;
   position: relative;
 
-  h4 {
+  .__content {
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -47,7 +47,7 @@
     width: 25px;
   }
 
-  .button-loader {
+  .__loader {
     position: absolute;
   }
 

@@ -5,7 +5,7 @@
 **Main**
 
 ```
-yarn add aws-amplify react-hot-toast react-svg @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/lab
+yarn add react-hot-toast react-svg @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/lab
 ```
 
 **Optional**

@@ -36,7 +36,7 @@ const HubListener = () => {
 
   const handleUser = async () => {
     try {
-      let user = await Auth.currentAuthenticatedUser()
+      const user = await Auth.currentAuthenticatedUser()
       if (user) {
         // HANDLE AUTH
         console.log(user)

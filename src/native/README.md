@@ -3,13 +3,13 @@
 **Main**
 
 ```
-yarn add aws-amplify react-hot-toast react-svg @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/lab
+yarn add
 ```
 
 **Optional**
 
 ```
-yarn add framer-motion formik yup prop-types render-smooth-image-react @aws-amplify/ui-react aws-amplify
+yarn add react-native-modal formik yup prop-types aws-amplify
 
 yarn add recoil // @hookstate/core
 ```

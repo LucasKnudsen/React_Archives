@@ -1,5 +1,21 @@
 import * as Yup from 'yup'
 
+const generateSchema = (fields) => {
+  const schema = {}
+  fields.forEach((field) => {
+    schema[field.key] = Yup.string().required('Some text')
+  })
+  return Yup.object().shape(schema)
+}
+
+const generateInitialValues = (fields) => {
+  const values = {}
+  fields.forEach(
+    (object) => (values[object.key] = input.get()?.[object.key] || '')
+  )
+  return values
+}
+
 export const loginSchema = Yup.object().shape({
   email: Yup.string()
     .email('Ugyldig email')
@@ -8,6 +24,9 @@ export const loginSchema = Yup.object().shape({
 })
 
 export const signUpSchema = Yup.object().shape({
+  username: Yup.string()
+    .required('Venligst indtast dit navn')
+    .matches(/^\S*$/, 'Ugyldigt mellemrum i brugernavnet'),
   email: Yup.string()
     .email('Ugyldig email')
     .required('Venligst indtast din email'),
